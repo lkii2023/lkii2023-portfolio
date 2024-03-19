@@ -244,6 +244,13 @@ const StyledHero = styled.header`
     }
   }
 
+  @media (max-width: 767px) {
+    .mobile-content {
+      font-size: 1.5rem; /* Ajustez la taille de la police selon vos besoins */
+      margin-bottom: 0.8rem;
+    }
+  }
+
   @media screen and (min-width: 1367px) {
     &::before {
       background: ${({ theme }) =>
@@ -260,18 +267,22 @@ export default function Hero() {
     <StyledHero>
       <Container>
         <Row className="align-items-center text-center">
-          <Col>
-            <h1 className="mb-3 display-3 title">Calixte Jean Sebastien</h1>
-            <h3 className="description">Developpeur Web</h3>
-            <br />
-            <div className="d-flex align-items-center justify-content-center">
-              <SocialLinks />
-            </div>
-          </Col>
-          <Col className="d-none d-md-block display-4">
+          <Col className="d-block d-md-block display-5 mobile-content">
             <div className="pl">
               <div className="pl__outer-ring"></div>
-              <div className="pl__inner-ring"></div>
+              <div className="pl__inner-ring d-flex align-items-center justify-content-center ">
+                <Col className="text-center">
+                  <h1 className=" display-3 title mobile-content">
+                    Calixte <br /> Jean Sebastien
+                  </h1>
+                  <h3 className="description mobile-content">
+                    Developpeur Web
+                  </h3>
+                  <div className="d-flex align-items-center justify-content-center mobile-content">
+                    <SocialLinks />
+                  </div>
+                </Col>
+              </div>
               <div className="pl__track-cover"></div>
               <div className="pl__ball">
                 <div className="pl__ball-texture"></div>

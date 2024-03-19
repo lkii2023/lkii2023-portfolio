@@ -94,11 +94,11 @@ export const skillData = [
     id: 6,
     skill: (
       <Icon
-        icon="file-icons:styledcomponents"
+        icon="fa6-brands:sass"
         className="display-4"
       />
     ),
-    name: "Styled Components",
+    name: "Sass",
   },
   {
     id: 7,
