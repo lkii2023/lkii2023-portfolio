@@ -5,11 +5,11 @@ import styled from "styled-components";
 // Data
 import { Blog } from "../data";
 // Icons
-import { Icon } from '@iconify/react';
+import { Icon } from "@iconify/react";
 
 const StyledSocialLinks = styled.div`
   a {
-    margin: 0 1rem;
+    margin: auto 0.5rem;
   }
 `;
 
@@ -26,7 +26,11 @@ export default function SocialLinks() {
         <Icon icon="icomoon-free:github" />
       </a>
       {blog && (
-        <a href={blog} aria-label="External link" className="link-icons">
+        <a
+          href={blog}
+          aria-label="External link"
+          className="link-icons"
+        >
           {Blog}
         </a>
       )}

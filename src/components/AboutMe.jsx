@@ -53,7 +53,7 @@ export default function AboutMe() {
                 </p>
               </Container>
             </Col>
-            <Col className="d-none d-md-block text-center">
+            <Col className="d-md-block text-center ">
               <img
                 src={avatar_url}
                 alt="GitHub Avatar"

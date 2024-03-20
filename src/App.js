@@ -23,17 +23,11 @@ import Home from "./pages/Home";
 import AllProjects from "./pages/AllProjects";
 import NotFound from "./pages/NotFound";
 
-const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
 const themes = {
   light: {
     name: "light",
     color: "#45413C",
     background: "#F5F2E8",
-  },
-  dark: {
-    name: "dark",
-    color: "#FBFDFF",
-    background: "#27272A",
   },
 };
 
@@ -45,20 +39,12 @@ export default function App() {
 
   React.useEffect(
     function () {
-      const updateTheme = () =>
-        darkMode ? setTheme("dark") : setTheme("light");
-      updateTheme();
+      setTheme("light");
       dispatch(fetchGitHubInfo());
       dispatch(fetchGitHubReops());
     },
     [setTheme, dispatch]
   );
-
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", (e) =>
-      e.matches ? setTheme("dark") : setTheme("light")
-    );
 
   if (isLoading) {
     return (
@@ -84,13 +70,26 @@ export default function App() {
         <ThemeProvider theme={themes[theme]}>
           <ScrollToTop />
           <GlobalStyles />
-          <Element name={"Home"} id="home">
+          <Element
+            name={"Home"}
+            id="home"
+          >
             <NavBar Logo={navLogo} />
           </Element>
           <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route path="/All-Projects" element={<AllProjects />} />
-            <Route path="*" element={<NotFound />} />
+            <Route
+              exact
+              path="/"
+              element={<Home />}
+            />
+            <Route
+              path="/All-Projects"
+              element={<AllProjects />}
+            />
+            <Route
+              path="*"
+              element={<NotFound />}
+            />
           </Routes>
         </ThemeProvider>
       </HashRouter>

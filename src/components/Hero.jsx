@@ -1,11 +1,8 @@
 import styled from "styled-components";
 // Icons
-
-import { Light, Dark } from "../data";
+import { Light } from "../data";
 // Components
 import { Col, Container, Row } from "react-bootstrap";
-import { Spin } from "./globalStyledComponents";
-import SocialLinks from "./SocialLinks";
 
 const StyledHero = styled.header`
   position: relative;
@@ -22,10 +19,7 @@ const StyledHero = styled.header`
     left: 0;
     width: 100%;
     height: 100%;
-    background: ${({ theme }) =>
-      theme.name === "light"
-        ? "linear-gradient(135deg, var(--primary), var(--bs-light))"
-        : "linear-gradient(135deg, var(--primary), var(--bs-dark))"};
+    background: linear-gradient(135deg, var(--primary), var(--bs-light));
     z-index: -2;
   }
 
@@ -59,6 +53,7 @@ const StyledHero = styled.header`
     position: relative;
     width: 16em;
     height: 16em;
+    z-index: -1;
   }
   .pl__ball,
   .pl__ball-inner-shadow,
@@ -209,37 +204,13 @@ const StyledHero = styled.header`
     }
   }
 
-  /* Overlay for contrast */
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: ${({ theme }) =>
-      theme.name === "light"
-        ? "rgba(255, 255, 255, 0.2)"
-        : "rgba(0, 0, 0, 0.2)"};
-    z-index: -1;
-  }
-
   .down-container {
     height: 10rem;
   }
 
-  @media (prefers-reduced-motion: no-preference) {
-    .hero-img {
-      animation: ${Spin} infinite 20s linear;
-    }
-  }
-
   @media screen and (min-width: 1180px) {
     &::before {
-      background: ${({ theme }) =>
-        theme.name === "light"
-          ? `url(${Light}) top center fixed no-repeat`
-          : `url(${Dark}) top center fixed no-repeat`};
+      background: url(${Light}) top center fixed no-repeat;
       background-size: 100vw auto;
     }
   }
@@ -247,16 +218,12 @@ const StyledHero = styled.header`
   @media (max-width: 767px) {
     .mobile-content {
       font-size: 1.5rem; /* Ajustez la taille de la police selon vos besoins */
-      margin-bottom: 0.8rem;
     }
   }
 
   @media screen and (min-width: 1367px) {
     &::before {
-      background: ${({ theme }) =>
-        theme.name === "light"
-          ? `url(${Light}) center center fixed no-repeat`
-          : `url(${Dark}) center center fixed no-repeat`};
+      background: url(${Light}) center center fixed no-repeat;
       background-size: cover;
     }
   }
@@ -267,20 +234,17 @@ export default function Hero() {
     <StyledHero>
       <Container>
         <Row className="align-items-center text-center">
-          <Col className="d-block d-md-block display-5 mobile-content">
-            <div className="pl">
-              <div className="pl__outer-ring"></div>
-              <div className="pl__inner-ring d-flex align-items-center justify-content-center ">
-                <Col className="text-center">
-                  <h1 className=" display-3 title mobile-content">
-                    Calixte <br /> Jean Sebastien
+          <Col className="d-block d-md-block display-5">
+            <div className="pl mobile-content">
+              <div className="pl__outer-ring mobile-content"></div>
+              <div className="pl__inner-ring d-flex align-items-center justify-content-center mobile-content">
+                <Col className="d-block align-items-center justify-content-center text-center">
+                  <h1 className=" display-4 title mobile-content">
+                    Jean Sebastien <br /> Calixte
                   </h1>
-                  <h3 className="description mobile-content">
+                  <h3 className="description mobile-content mt-3">
                     Developpeur Web
                   </h3>
-                  <div className="d-flex align-items-center justify-content-center mobile-content">
-                    <SocialLinks />
-                  </div>
                 </Col>
               </div>
               <div className="pl__track-cover"></div>

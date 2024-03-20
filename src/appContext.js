@@ -6,7 +6,7 @@ const AppProvider = function ({ children }) {
   const [theme, setTheme] = React.useState("light");
   const [isExpanded, setExpanded] = React.useState(false);
 
-  const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
+  // Suppression de la logique du thème sombre
 
   const toggleExpanded = () => setExpanded((prevState) => !prevState);
 
@@ -21,7 +21,6 @@ const AppProvider = function ({ children }) {
       value={{
         theme,
         setTheme,
-        toggleTheme,
         isExpanded,
         toggleExpanded,
         closeExpanded,

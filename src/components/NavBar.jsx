@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import SocialLinks from "./SocialLinks";
 import { useAppContext } from "../appContext";
 import { Link as ScrollLink } from "react-scroll";
 import { Link, useLocation } from "react-router-dom";
@@ -8,27 +8,20 @@ import styled from "styled-components";
 // Components
 import { Container, Nav, Navbar } from "react-bootstrap";
 // Images
-import Logo from "./defaultNavLogo.svg";
 
 // #region styled-components
 
 const FixedNavSpacer = styled.div`
   height: var(--nav-height);
+  max-height: 57px;
 `;
 
 // #endregion
 
 // #region component
-const propTypes = {
-  Logo: PropTypes.node.isRequired,
-};
 
-const defaultProps = {
-  Logo: Logo,
-};
-
-export default function NavBar({ Logo }) {
-  const { theme, isExpanded, closeExpanded, toggleExpanded } = useAppContext();
+export default function NavBar() {
+  const { isExpanded, closeExpanded, toggleExpanded } = useAppContext();
   const { pathname } = useLocation();
   const navLinks = {
     routes: [
@@ -52,20 +45,14 @@ export default function NavBar({ Logo }) {
         collapseOnSelect={true}
         expand="lg"
         expanded={isExpanded}
-        bg={theme === "light" ? "light" : "dark"}
-        variant={theme === "light" ? "light" : "dark"}
+        bg="light" // Utilisation du thème clair pour le fond
+        variant="light" // Utilisation du thème clair pour les couleurs
         fixed="top"
       >
         <Container>
-          <Navbar.Brand>
-            <img
-              alt="Logo"
-              src={Logo}
-              width="35"
-              height="35"
-              className="rounded-circle"
-            />
-          </Navbar.Brand>
+          <div className="d-block align-items-center">
+            <SocialLinks />
+          </div>
           <Navbar.Toggle
             aria-controls="responsive-navbar-nav"
             onClick={toggleExpanded}
@@ -117,6 +104,4 @@ export default function NavBar({ Logo }) {
   );
 }
 
-NavBar.propTypes = propTypes;
-NavBar.defaultProps = defaultProps;
 // #endregion
