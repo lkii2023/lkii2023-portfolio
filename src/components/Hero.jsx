@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import snow from "../images/snow.jpg";
 // Icons
 import { Light } from "../data";
 // Components
@@ -121,7 +122,7 @@ const StyledHero = styled.header`
   .pl__ball-texture:before {
     animation-name: ballTexture;
     animation-duration: 0.25s;
-    background: url(https://assets.codepen.io/416221/snow.jpg) 0 0 / 50% 100%;
+    background: url("${snow}") 0 0 / 50% 100%;
     content: "";
     display: block;
     filter: brightness(1.05);

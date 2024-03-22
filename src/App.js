@@ -11,7 +11,6 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import { Element } from "react-scroll";
 import { ThemeProvider } from "styled-components";
 // Data
-import { navLogo } from "./data";
 // Components
 import { Container } from "react-bootstrap";
 import { Loading } from "./components/globalStyledComponents";
@@ -74,7 +73,7 @@ export default function App() {
             name={"Home"}
             id="home"
           >
-            <NavBar Logo={navLogo} />
+            <NavBar />
           </Element>
           <Routes>
             <Route
