@@ -15,6 +15,12 @@ const StyledAboutMe = styled.section`
     width: 18rem;
     height: 18rem;
   }
+
+  @media (min-width: 768px) {
+    .avatar-img {
+      margin-top: 10rem;
+    }
+  }
 `;
 
 export default function AboutMe() {
@@ -34,7 +40,7 @@ export default function AboutMe() {
             </Title>
           </Container>
           <Row className="align-items-center mt-5">
-            <Col className="d-flex flex-column text-left">
+            <Col className="d-flex flex-column text-left mb-5">
               <Container>
                 <p>
                   I am a motivated junior web developer passionate about
@@ -59,8 +65,11 @@ export default function AboutMe() {
                 src={avatar_url}
                 alt="GitHub Avatar"
                 loading="lazy"
-                className="mx-auto rounded-circle mt-4"
-                style={{ width: "15rem", height: "15rem" }}
+                className="mx-auto rounded-circle"
+                style={{
+                  width: "15rem",
+                  height: "15rem",
+                }}
               />
             </Col>
           </Row>
