@@ -12,3 +12,5 @@ To explore my portfolio, please visit the following link: [My Portfolio](https:/
 
 About Me
 I am an enthusiastic web developer based somewhere on this beautiful planet. I am constantly exploring new technologies and seeking out interesting projects to get involved with.
+
+This website was made with the template at : https://mshuber1981.github.io/github-react-portfolio-template/#/
