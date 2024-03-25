@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import snow from "../images/snow.jpg";
+import zoltan from "../images/zoltan.jpg";
 // Icons
 import { Light } from "../data";
 // Components
@@ -211,14 +212,39 @@ const StyledHero = styled.header`
 
   @media screen and (min-width: 1180px) {
     &::before {
-      background: url(${Light}) top center fixed no-repeat;
       background-size: 100vw auto;
+    }
+  }
+
+  @media screen and (min-width: 368px) {
+    &::before {
+      background: url(${zoltan}) top center fixed no-repeat;
+      background-size: cover;
     }
   }
 
   @media (max-width: 767px) {
     .mobile-content {
       font-size: 1.5rem; /* Ajustez la taille de la police selon vos besoins */
+      color: var(--bs-dark);
+    }
+
+    .pl__inner-ring {
+      display: none;
+      color: transparent;
+    }
+
+    .pl__outer-ring {
+      display: none;
+      color: transparent;
+    }
+    .pl__track-cover {
+      display: none;
+    }
+
+    .pl__ball {
+      display: none;
+      color: transparent;
     }
   }
 
@@ -235,7 +261,7 @@ export default function Hero() {
     <StyledHero>
       <Container>
         <Row className="align-items-center text-center">
-          <Col className="d-block d-md-block display-5">
+          <Col className="d-block d-md-block display-5 mobile-content">
             <div className="pl mobile-content">
               <div className="pl__outer-ring mobile-content"></div>
               <div className="pl__inner-ring d-flex align-items-center justify-content-center mobile-content">
