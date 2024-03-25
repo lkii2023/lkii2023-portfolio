@@ -1,10 +1,11 @@
 {
   "files": {
     "main.css": "/lkii2023-portfolio/static/css/main.63ffa884.css",
-    "main.js": "/lkii2023-portfolio/static/js/main.78742a0f.js",
+    "main.js": "/lkii2023-portfolio/static/js/main.912de4de.js",
     "static/media/SophieB.webp": "/lkii2023-portfolio/static/media/SophieB.59e6c0859277a09ec7b0.webp",
     "static/media/Kasa.webp": "/lkii2023-portfolio/static/media/Kasa.ea3ccb484eea4033cc89.webp",
     "static/media/hero-dark.jpg": "/lkii2023-portfolio/static/media/hero-dark.37f2556d620821979e99.jpg",
+    "static/media/zoltan.jpg": "/lkii2023-portfolio/static/media/zoltan.6842636000e5678382ec.jpg",
     "static/media/hero-light.jpg": "/lkii2023-portfolio/static/media/hero-light.78b77836d8aee4d7d3cb.jpg",
     "static/media/ArgentBank.jpg": "/lkii2023-portfolio/static/media/ArgentBank.25f3e7e4ec45bd0f3a4a.jpg",
     "service-worker.js": "/lkii2023-portfolio/service-worker.js",
@@ -12,10 +13,10 @@
     "static/media/logo.svg": "/lkii2023-portfolio/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/lkii2023-portfolio/index.html",
     "main.63ffa884.css.map": "/lkii2023-portfolio/static/css/main.63ffa884.css.map",
-    "main.78742a0f.js.map": "/lkii2023-portfolio/static/js/main.78742a0f.js.map"
+    "main.912de4de.js.map": "/lkii2023-portfolio/static/js/main.912de4de.js.map"
   },
   "entrypoints": [
     "static/css/main.63ffa884.css",
-    "static/js/main.78742a0f.js"
+    "static/js/main.912de4de.js"
   ]
 }
