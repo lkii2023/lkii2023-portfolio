@@ -34,21 +34,22 @@ export default function AboutMe() {
             </Title>
           </Container>
           <Row className="align-items-center mt-5">
-            <Col className="d-flex flex-column text-center">
+            <Col className="d-flex flex-column text-left">
               <Container>
                 <p>
                   I am a motivated junior web developer passionate about
                   creating interactive websites and applications. Having
-                  recently completed my training, I am eager to put my skills
-                  into practice and continue learning in a professional
-                  environment. My passion for web development is fueled by my
-                  insatiable curiosity and constant desire for improvement. I am
-                  excited about the opportunity to contribute to innovative
-                  projects and collaborate with dynamic teams. Outside of
-                  development, I enjoy exploring new technologies, solving
-                  problems, and participating in online communities to broaden
-                  my knowledge and share my experiences. I am convinced that
-                  continuous learning is the key to success in this
+                  recently completed my training on OpenClassroom, I am eager to
+                  put my skills into practice and continue learning in a
+                  professional environment. <br /> My passion for web
+                  development is fueled by my insatiable curiosity and constant
+                  desire for improvement. I am excited about the opportunity to
+                  contribute to innovative projects and collaborate with dynamic
+                  teams. <br />
+                  Outside of development, I enjoy exploring new technologies,
+                  solving problems, and participating in online communities to
+                  broaden my knowledge and share my experiences. I am convinced
+                  that continuous learning is the key to success in this
                   ever-evolving field.
                 </p>
               </Container>
@@ -58,7 +59,7 @@ export default function AboutMe() {
                 src={avatar_url}
                 alt="GitHub Avatar"
                 loading="lazy"
-                className="mx-auto rounded-circle"
+                className="mx-auto rounded-circle mt-4"
                 style={{ width: "15rem", height: "15rem" }}
               />
             </Col>

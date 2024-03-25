@@ -29,10 +29,7 @@ export const Blog = <Icon icon="ph:link-bold" />;
 
 /* About Me
  **************************************************************
-  Add a second paragraph for the about me section.
-*/
-export const moreInfo =
-  "I enjoy learning about technology and helping others use it to improve their lives and be more productive. I built this site with React, React Bootstrap, Redux, and the GitHub REST API.";
+  Add a second paragraph for the about me section
 
 /* Skills
  ************************************************************** 
@@ -165,4 +162,4 @@ export const projectCardImages = [
   Add your formspree endpoint below.
   https://formspree.io/
 */
-export const formspreeUrl = "https://formspree.io/f/YourEndpoint";
+export const formspreeUrl = "https://formspree.io/f/mnqegaql";

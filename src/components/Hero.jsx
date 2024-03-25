@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import snow from "../images/snow.jpg";
-import zoltan from "../images/zoltan.jpg";
 // Icons
 import { Light } from "../data";
 // Components
@@ -210,15 +209,16 @@ const StyledHero = styled.header`
     height: 10rem;
   }
 
-  @media screen and (min-width: 1180px) {
+  @media screen and (max-width: 1180px) {
     &::before {
       background-size: 100vw auto;
+      background-position: center;
     }
   }
 
   @media screen and (min-width: 368px) {
     &::before {
-      background: url(${zoltan}) top center fixed no-repeat;
+      background: url(${Light}) top center fixed no-repeat;
       background-size: cover;
     }
   }
