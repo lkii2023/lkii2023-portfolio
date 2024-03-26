@@ -10,11 +10,9 @@ import ArgentBank from "./images/ArgentBank.jpg";
 import Portfolio from "./images/SophieB.webp";
 
 // Hero Images (add your images to the /images directory with the same names)
-import HeroLight from "./images/hero-light.jpg";
-import HeroDark from "./images/hero-dark.jpg";
+import HeroLight from "./images/hero-light.webp";
 // If you change the import names above then you need to change the export names below
 export { HeroLight as Light };
-export { HeroDark as Dark };
 
 /* START HERE
  **************************************************************

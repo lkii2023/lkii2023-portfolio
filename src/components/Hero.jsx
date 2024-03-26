@@ -30,9 +30,11 @@ const StyledHero = styled.header`
     margin: 0;
     padding: 0;
   }
+
   :root {
     font-size: calc(16px + (20 - 16) * (100vw - 320px) / (1280 - 320));
   }
+
   body {
     background-color: hsl(223, 90%, 95%);
     font: 1em/1.5 sans-serif;
@@ -40,6 +42,7 @@ const StyledHero = styled.header`
     display: grid;
     place-items: center;
   }
+
   .pl,
   .pl__ball,
   .pl__ball-inner-shadow,
@@ -50,12 +53,14 @@ const StyledHero = styled.header`
   .pl__track-cover {
     border-radius: 50%;
   }
+
   .pl {
     position: relative;
     width: 16em;
     height: 16em;
     z-index: -1;
   }
+
   .pl__ball,
   .pl__ball-inner-shadow,
   .pl__ball-outer-shadow,
@@ -67,6 +72,7 @@ const StyledHero = styled.header`
   .pl__track-cover {
     position: absolute;
   }
+
   .pl__ball,
   .pl__ball-inner-shadow,
   .pl__ball-outer-shadow,
@@ -74,6 +80,7 @@ const StyledHero = styled.header`
   .pl__track-cover {
     animation: ball 3s linear infinite;
   }
+
   .pl__ball {
     top: calc(50% - 1.25em);
     left: calc(50% - 1.25em);
@@ -81,6 +88,7 @@ const StyledHero = styled.header`
     width: 2.5em;
     height: 2.5em;
   }
+
   .pl__ball-inner-shadow {
     animation-name: ballInnerShadow;
     box-shadow: 0 0.1em 0.2em hsla(0, 0%, 0%, 0.3),
@@ -89,12 +97,14 @@ const StyledHero = styled.header`
     width: 100%;
     height: 100%;
   }
+
   .pl__ball-outer-shadow {
     animation-name: ballOuterShadow;
     background-image: linear-gradient(
       hsla(0, 0%, 0%, 0.15),
       hsla(0, 0%, 0%, 0)
     );
+
     border-radius: 0 0 50% 50% / 0 0 100% 100%;
     filter: blur(2px);
     top: 50%;
@@ -105,6 +115,7 @@ const StyledHero = styled.header`
     transform-origin: 50% 0;
     z-index: -2;
   }
+
   .pl__ball-side-shadows {
     background-color: hsla(0, 0%, 0%, 0.1);
     filter: blur(2px);
@@ -113,12 +124,14 @@ const StyledHero = styled.header`
     transform: scale(0.75, 1.1);
     z-index: -1;
   }
+
   .pl__ball-texture {
     overflow: hidden;
     width: 100%;
     height: 100%;
     transform: translate3d(0, 0, 0);
   }
+
   .pl__ball-texture:before {
     animation-name: ballTexture;
     animation-duration: 0.25s;
@@ -209,21 +222,20 @@ const StyledHero = styled.header`
     height: 10rem;
   }
 
-  @media screen and (max-width: 1180px) {
+  @media screen and (max-width: 1920px) {
     &::before {
       background-size: 100vw auto;
       background-position: center;
+      background: url(${Light}) top center fixed no-repeat;
     }
   }
 
-  @media screen and (min-width: 368px) {
+  @media screen and (max-width: 768px) {
     &::before {
       background: url(${Light}) top center fixed no-repeat;
       background-size: cover;
     }
-  }
 
-  @media (max-width: 767px) {
     .mobile-content {
       font-size: 1.5rem; /* Ajustez la taille de la police selon vos besoins */
       color: var(--bs-dark);
@@ -245,13 +257,6 @@ const StyledHero = styled.header`
     .pl__ball {
       display: none;
       color: transparent;
-    }
-  }
-
-  @media screen and (min-width: 1367px) {
-    &::before {
-      background: url(${Light}) center center fixed no-repeat;
-      background-size: cover;
     }
   }
 `;

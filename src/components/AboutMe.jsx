@@ -15,12 +15,6 @@ const StyledAboutMe = styled.section`
     width: 18rem;
     height: 18rem;
   }
-
-  @media (min-width: 768px) {
-    .avatar-img {
-      margin-top: 10rem;
-    }
-  }
 `;
 
 export default function AboutMe() {
